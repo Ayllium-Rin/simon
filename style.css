@@ -1,0 +1,238 @@
+body{
+  margin: 50px auto;
+  padding: 0;
+  background: #333;
+  color: #ededcc;
+  font-family: 'Amatic SC', cursive;
+  overflow-x: hidden;
+}
+footer {
+    border: 3px solid #070707;
+    border-radius: 50%;
+    background: #ededcc;
+    color: #070707;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    margin 20px 10px;
+    padding 0 20px;
+    justify-content: center;
+    align-items: center;
+    max-height: 30px;
+    width: 100%;
+}
+footer a {
+    color: #070707;
+    margin 10px;
+    padding 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #555;
+}
+#nav {
+  margin: 0;
+  opacity: .7;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.wrapper {
+  border: 2px solid #070707;
+  align-items: center;
+  background: #ededcc;
+  display: grid;
+  height: 40px;
+  grid-template-columns: repeat(16, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+  justify-items: center;
+  padding 0;
+  width 100%;
+}
+#home {
+  color: #070707;
+  grid-column: 14/15;
+  grid-row: 1;
+}
+#about {
+  color: #070707;
+  grid-column: 15/16;
+  grid-row: 1;
+}
+#links {
+  color: #070707;
+  grid-column: 16/17;
+  grid-row: 1;
+}
+#logo {
+  color: #070707;
+  font-size: 24px;
+  grid-column: 1/3;
+  grid-row: 1;
+}
+#gameBoard{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4 1fr);
+  margin: auto;
+  padding: 10px;
+  border: 15px solid #537655;
+  border-radius: 50%;
+  background: #070707;
+  width: 700px;
+  height: 700px;
+}
+#center{
+  background: #ededcc;
+  color: #070707;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  border: 15px solid #537655;
+  border-radius: 50%;
+  grid-column: 1/5;
+  grid-row: 1/5;
+  /* text-align: center; */
+  z-index: 1;
+}
+#controls{
+  margin: auto;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+#buttons{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+#main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#display{
+  width: 80px;
+  height: 55px;
+  border: 2px solid #070707;
+  border-radius: 5px;
+  background: #440000;
+}
+#start{
+  margin: 0 20px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #537655;
+  border-radius: 50%;
+  background: red;
+  text-align: center;
+}
+#strict{
+  margin: 0 20px;
+  padding 0;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #537655;
+  border-radius: 50%;
+  background: yellow;
+  text-align: center;
+}
+#powerOn{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#onOff{
+  background: #070707;
+  width: 65px;
+  height: 30px;
+  border: 2px solid #537655;
+  border-radius: 5px;
+}
+#switch{
+  margin: 0;
+  padding: 0;
+  background: blue;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+.label{
+  margin: 0 25px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #070707;
+}
+#brand{
+  margin: 20px 5px 0 35px;
+  padding: 5px 0 0 0;
+  font-size: 26px;
+}
+#title{
+  font-size: 90px;
+  font-weight: 700;
+  font-family: 'Times New Roman', serif;
+  margin: 0 5px 5px 30px;;
+  padding: 0;
+}
+#green{
+  background: green;
+  border: 10px solid #537655;
+  margin: auto;
+  opacity: .5;
+  padding: 0;
+  height: 325px;
+  width: 325px;
+  border-top-left-radius: 100%;
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+#red{
+  background: red;
+  border: 10px solid #537655;
+  margin: auto;
+  opacity: .5;
+  padding: 0;
+  height: 325px;
+  width: 325px;
+  border-top-right-radius: 100%;
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+#blue{
+  background: blue;
+  border: 10px solid #537655;
+  margin: auto;
+  opacity: .5;
+  padding: 0;
+  height: 325px;
+  width: 325px;
+  border-bottom-right-radius: 100%;
+  grid-column: 3/5;
+  grid-row: 3/5;
+}
+#yellow{
+  background: yellow;
+  border: 10px solid #537655;
+  margin: auto;
+  opacity: .5;
+  padding: 0;
+  height: 325px;
+  width: 325px;
+  border-bottom-left-radius: 100%;
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+/* #green:hover{opacity: 1;}
+#red:hover{opacity: 1;}
+#yellow:hover{opacity: 1;}
+#blue:hover{opacity: 1;} */
