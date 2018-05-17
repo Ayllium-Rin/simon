@@ -1,33 +1,23 @@
 body{
-  margin: 50px auto;
+  margin: 50px auto 10px auto;
   padding: 0;
   background: #333;
-  color: #ededcc;
+  color: #070707;
   font-family: 'Amatic SC', cursive;
   overflow-x: hidden;
 }
-footer {
-    border: 3px solid #070707;
-    border-radius: 50%;
-    background: #ededcc;
-    color: #070707;
-    display: flex;
-    font-size: 18px;
-    font-weight: 600;
-    margin 20px 10px;
-    padding 0 20px;
-    justify-content: center;
-    align-items: center;
-    max-height: 30px;
-    width: 100%;
+footer div{
+  border: 3px solid #070707;
+  border-radius: 50%;
+  background: #ededcc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-height: 30px;
+  width: 100%;
 }
-footer a {
-    color: #070707;
-    margin 10px;
-    padding 10px;
-    text-decoration: none;
-}
-footer a:hover {
+.link:hover {
     color: #555;
 }
 #nav {
@@ -36,7 +26,7 @@ footer a:hover {
   padding: 0;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 99.7%;
   z-index: 1;
 }
 .wrapper {
@@ -51,36 +41,40 @@ footer a:hover {
   padding 0;
   width 100%;
 }
-#home {
+.link{
+  margin: 5px;
+  text-decoration: none;
   color: #070707;
+  font-size: 18px;
+  font-weight: 700;
+}
+#home {
   grid-column: 14/15;
   grid-row: 1;
 }
 #about {
-  color: #070707;
   grid-column: 15/16;
   grid-row: 1;
 }
 #links {
-  color: #070707;
   grid-column: 16/17;
   grid-row: 1;
 }
 #logo {
-  color: #070707;
   font-size: 24px;
   grid-column: 1/3;
   grid-row: 1;
 }
 #gameBoard{
+  box-shadow: 20px 20px 10px #222;
   display: grid;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4 1fr);
-  margin: auto;
+  margin: auto auto 30px auto;
   padding: 10px;
-  border: 15px solid #537655;
+  border: 8px solid #010;
   border-radius: 50%;
   background: #070707;
   width: 700px;
@@ -91,21 +85,18 @@ footer a:hover {
   color: #070707;
   width: 350px;
   height: 350px;
-  margin: auto;
-  border: 15px solid #537655;
+  border: 10px solid #010;
   border-radius: 50%;
   grid-column: 1/5;
   grid-row: 1/5;
-  /* text-align: center; */
   z-index: 1;
 }
 #controls{
-  margin: auto;
   padding: 20px;
   width: 300px;
   height: 300px;
 }
-#buttons{
+.buttons{
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -118,31 +109,39 @@ footer a:hover {
   justify-content: center;
 }
 #display{
-  width: 80px;
-  height: 55px;
+  margin: 0 10px 0 0;
+  width: 90px;
+  height: 65px;
   border: 2px solid #070707;
   border-radius: 5px;
   background: #440000;
+  text-align: right;
+}
+#counter{
+  width: 75px;
+  height: 50px;
+  color: red;
+  font-family: 'VT323', monospace;
+  /* font-family: 'Press Start 2P', cursive; */
+  font-weight: 700;
+  font-size: 55px;
+}
+.btn{
+  box-shadow: 3px 3px 2px #222;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #070707;
+  border-radius: 50%;
+  text-align: center;
 }
 #start{
-  margin: 0 20px;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  border: 4px solid #537655;
-  border-radius: 50%;
-  background: red;
-  text-align: center;
+  background: #bb1111;
 }
 #strict{
-  margin: 0 20px;
-  padding 0;
-  width: 40px;
-  height: 40px;
-  border: 4px solid #537655;
-  border-radius: 50%;
-  background: yellow;
-  text-align: center;
+  background: #ffcc00;
 }
 #powerOn{
   margin: 20px;
@@ -159,16 +158,15 @@ footer a:hover {
   border-radius: 5px;
 }
 #switch{
-  margin: 0;
-  padding: 0;
+  box-shadow: 3px 3px 2px #070707;
   background: blue;
   width: 30px;
   height: 30px;
   border-radius: 5px;
 }
 .label{
-  margin: 0 25px;
-  font-size: 16px;
+  margin: 0 15px;
+  font-size: 20px;
   font-weight: 800;
   color: #070707;
 }
@@ -182,57 +180,146 @@ footer a:hover {
   font-weight: 700;
   font-family: 'Times New Roman', serif;
   margin: 0 5px 5px 30px;;
-  padding: 0;
 }
-#green{
-  background: green;
+.gameControls{
   border: 10px solid #537655;
   margin: auto;
   opacity: .5;
-  padding: 0;
   height: 325px;
   width: 325px;
+}
+#green{
+  background: green;
   border-top-left-radius: 100%;
   grid-column: 1/3;
   grid-row: 1/3;
 }
 #red{
   background: red;
-  border: 10px solid #537655;
-  margin: auto;
-  opacity: .5;
-  padding: 0;
-  height: 325px;
-  width: 325px;
   border-top-right-radius: 100%;
   grid-column: 3/5;
   grid-row: 1/3;
 }
 #blue{
   background: blue;
-  border: 10px solid #537655;
-  margin: auto;
-  opacity: .5;
-  padding: 0;
-  height: 325px;
-  width: 325px;
   border-bottom-right-radius: 100%;
   grid-column: 3/5;
   grid-row: 3/5;
 }
 #yellow{
   background: yellow;
-  border: 10px solid #537655;
-  margin: auto;
-  opacity: .5;
-  padding: 0;
-  height: 325px;
-  width: 325px;
   border-bottom-left-radius: 100%;
   grid-column: 1/3;
   grid-row: 3/5;
 }
-/* #green:hover{opacity: 1;}
-#red:hover{opacity: 1;}
-#yellow:hover{opacity: 1;}
-#blue:hover{opacity: 1;} */
+.animationOn{
+  position: relative;
+  animation-name: switchOn;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.animationOff{
+  position: relative;
+  animation-name: switchOff;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.animationPluseOn{
+  animation-name: pluseOn;
+  animation-duration: 1s;
+}
+@keyframes pluseOn {
+  0% {background-color: #ffcc00;}
+  50% {background-color: #bb1111;}
+  100% {background-color: #ffcc00;}
+}
+@keyframes switchOn {
+  0% {left: 0px;}
+  25% {left: 10px;}
+  50% {left: 20px;}
+  75% {left: 30px;}
+  100% {left: 35px;}
+}
+@keyframes switchOff {
+  0% {left: 35px;}
+  25% {left: 30px;}
+  50% {left: 20px;}
+  75% {left: 10px;}
+  100% {left: 0px;}
+}
+
+@media only screen and (max-width: 600px) {
+  #logo{
+    font-size: 22px;
+    grid-column: 1/5;
+  }
+  #gameBoard{
+    margin: auto auto 30px auto;
+    width: 500px;
+    height: 500px;
+  }
+  #center{
+    width: 245px;
+    height: 245px;
+  }
+  #controls{
+    padding: 14px;
+    width: 210px;
+    height: 210px;
+  }
+  #display{
+    margin: 0 7px 0 20px;
+    width: 63px;
+    height: 46px;
+  }
+  #counter{
+    width: 53px;
+    height: 35px;
+    font-size: 39px;
+  }
+  .btn{
+    width: 21px;
+    height: 21px;
+  }
+  #powerOn{
+    margin: 14px 0 0 0;
+  }
+  #onOff{
+    width: 46px;
+    height: 21px;
+  }
+  #switch{
+    width: 21px;
+    height: 21px;
+  }
+  .label{
+    margin: 0 15px;
+    font-size: 14px;
+  }
+  #brand{
+    font-size: 18px;
+    margin: 14px 5px 0 25px;
+  }
+  #title{
+    font-size: 63px;
+    margin: 0 5px 5px 21px;
+  }
+  .gameControls{
+    height: 227px;
+    width: 227px;
+  }
+  @keyframes switchOn {
+    0% {left: 0px;}
+    25% {left: 7px;}
+    50% {left: 14px;}
+    75% {left: 21px;}
+    100% {left: 25px;}
+  }
+  @keyframes switchOff {
+    0% {left: 25px;}
+    25% {left: 21px;}
+    50% {left: 14px;}
+    75% {left: 7px;}
+    100% {left: 0px;}
+  }
+}
